@@ -1,6 +1,5 @@
 import React from 'react'
 import '../themes-dist-5.1-gcweb/css/theme.css';
-import NavigationLink from './NavigationLink'
 
 class Dropdown extends React.Component {
   state = {
@@ -13,14 +12,18 @@ class Dropdown extends React.Component {
 
   render() {
     return (
-
-        <li role="presentation">
-          <a onClick={() => this.toggleDropdown()} role="menuitem" tabindex={this.props.index} aria-haspopup="true" aria-controls={this.props.contentId} aria-expanded={this.state.showDropdown} href="#">
-            {this.props.title}
-          </a>
-          {this.props.children}
-        </li>
-      
+      <li role="presentation">
+        <a role="menuitem"
+          tabindex={this.props.index}
+          aria-haspopup="true"
+          aria-controls={this.props.contentId}
+          aria-expanded={this.state.showDropdown}
+          href="#"
+          onClick={() => this.toggleDropdown()} >
+          {this.props.title}
+        </a>
+        {this.props.children}
+      </li>
     )
   }
 }

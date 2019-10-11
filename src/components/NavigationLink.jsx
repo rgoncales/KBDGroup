@@ -1,7 +1,7 @@
 import React from 'react'
 import '../themes-dist-5.1-gcweb/css/theme.css';
 
-const SimpleItem = ({ to, className, children }) => {
+const NavigationLink = ({ to, className, children }) => {
   return (
     <li role="presentation">
       <a role="menuitem" tabindex="-1" href={to}>
@@ -11,4 +11,4 @@ const SimpleItem = ({ to, className, children }) => {
   )
 }
 
-export default SimpleItem
+export default NavigationLink
