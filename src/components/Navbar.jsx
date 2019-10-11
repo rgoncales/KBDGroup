@@ -1,6 +1,7 @@
 import React from 'react';
 import '../themes-dist-5.1-gcweb/css/theme.css';
 import Dropdown from './Dropdown';
+import NavigationLink from './NavigationLink'
 
 class Navbar extends React.Component {
   state = {
@@ -12,7 +13,41 @@ class Navbar extends React.Component {
   }
 
   render() {
-    const renderDropdown = this.state.showDropdown ? <Dropdown/> : null;
+    const renderFirstDropdown = (
+      <Dropdown title={'Jobs and the workplace'} contentId={'gc-mnu-jobs'} index={0}>
+        <ul id="gc-mnu-jobs" role="menu" aria-orientation="vertical">
+          <li role="separator"/>
+          <NavigationLink to="https://www.canada.ca/en/services/jobs/opportunities.html">
+            Find a job
+          </NavigationLink>
+          <NavigationLink to="https://www.canada.ca/en/services/jobs/training.html">
+            Training
+          </NavigationLink>
+          <NavigationLink to="https://www.canada.ca/business-management">
+            Hire and manage employees
+          </NavigationLink>
+          <li role="separator"/>
+        </ul>
+      </Dropdown>
+    )
+
+    const renderSecondDropdown = (
+      <Dropdown title={'My content'} contentId={'gc-mnu-cit'} index={0}>
+        <ul id="gc-mnu-cit" role="menu" aria-orientation="vertical">
+          <li role="separator"/>
+          <NavigationLink to="https://www.canada.ca/en/services/jobs/opportunities.html">
+            Find a job
+          </NavigationLink>
+          <NavigationLink to="https://www.canada.ca/en/services/jobs/training.html">
+            Training
+          </NavigationLink>
+          <NavigationLink to="https://www.canada.ca/business-management">
+            Hire and manage employees
+          </NavigationLink>
+          <li role="separator"/>
+        </ul>
+      </Dropdown>
+    )
 
     return (
       <nav class="gcweb-menu wb-init gcweb-menu-inited" typeof="SiteNavigationElement" id="wb-auto-2">
@@ -32,7 +67,10 @@ class Navbar extends React.Component {
             Menu
             <span class="expicon glyphicon glyphicon-chevron-down"></span>
           </button>
-          {renderDropdown}
+          <ul role="menu" aria-orientation="vertical" data-ajax-replace="./ajax/sitemenu-v5-en.html" class="wb-init wb-data-ajax-replace-inited" id="wb-auto-3">
+            {renderFirstDropdown}
+            {renderSecondDropdown}
+          </ul>
         </div>
       </nav>
 
