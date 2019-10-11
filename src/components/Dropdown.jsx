@@ -14,7 +14,7 @@ class Dropdown extends React.Component {
     return (
       <li role="presentation">
         <a role="menuitem"
-          tabindex={this.props.index}
+          tabIndex={this.props.index}
           aria-haspopup="true"
           aria-controls={this.props.contentId}
           aria-expanded={this.state.showDropdown}

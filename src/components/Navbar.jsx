@@ -50,9 +50,9 @@ class Navbar extends React.Component {
     )
 
     return (
-      <nav class="gcweb-menu wb-init gcweb-menu-inited" typeof="SiteNavigationElement" id="navbar">
+      <nav className="gcweb-menu wb-init gcweb-menu-inited" typeof="SiteNavigationElement" id="navbar">
         <div className="container">
-          <h2 class="wb-inv">
+          <h2 className="wb-inv">
             Menu
           </h2>
           <button
@@ -61,13 +61,13 @@ class Navbar extends React.Component {
             aria-expanded={this.state.showDropdown}
             onClick={() => this.toggleDropdown()}
           >
-            <span class="wb-inv">
+            <span className="wb-inv">
               Main
             </span>
             Menu
-            <span class="expicon glyphicon glyphicon-chevron-down"></span>
+            <span className="expicon glyphicon glyphicon-chevron-down"></span>
           </button>
-          <ul role="menu" aria-orientation="vertical" data-ajax-replace="./ajax/sitemenu-v5-en.html" class="wb-init wb-data-ajax-replace-inited" id="wb-auto-3">
+          <ul role="menu" aria-orientation="vertical" data-ajax-replace="./ajax/sitemenu-v5-en.html" className="wb-init wb-data-ajax-replace-inited" id="wb-auto-3">
             {renderFirstDropdown}
             {renderSecondDropdown}
           </ul>

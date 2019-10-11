@@ -3,14 +3,11 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  useRouteMatch,
-  useParams
 } from "react-router-dom";
 import './App.css';
 import './themes-dist-5.1-gcweb/css/theme.css';
 import Navbar from './components/Navbar';
-import MainContainer from './components/MainContainer'
+import {About, Greetings, Static, Home} from './pages/content'
 
 function App() {
   return (
@@ -19,22 +16,16 @@ function App() {
       <Router>
         <Switch>
           <Route path="/about">
-            <MainContainer title='What is this?'>
-              This website was created as a coding challenge for KBD_Group. Thank you for looking at it.
-            </MainContainer>
+            <About/>
           </Route>
           <Route path="/hello">
-            <MainContainer title='Hello KBG Group'>
-              Hello  guys! Thanks for meeting with me the other day and showing me around the office.
-            </MainContainer>
+            <Greetings/>
           </Route>
           <Route path="/more-content">
-            <MainContainer title='Static Content'>
-              THIS CONTENT IS STATIC
-            </MainContainer>
+            <Static/>
           </Route>
           <Route path="/">
-            <MainContainer title='Home Page'> This is the home page.</MainContainer>
+            <Home/>
           </Route>
         </Switch>
     </Router>

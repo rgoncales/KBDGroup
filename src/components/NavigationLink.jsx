@@ -4,7 +4,7 @@ import '../themes-dist-5.1-gcweb/css/theme.css';
 const NavigationLink = ({ to, className, children }) => {
   return (
     <li role="presentation">
-      <a role="menuitem" tabindex="-1" href={to}>
+      <a role="menuitem" tabIndex="-1" href={to}>
         {children}
       </a>
     </li>
