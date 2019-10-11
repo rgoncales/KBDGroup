@@ -35,14 +35,14 @@ class Navbar extends React.Component {
       <Dropdown title={'My content'} contentId={'gc-mnu-cit'} index={0}>
         <ul id="gc-mnu-cit" role="menu" aria-orientation="vertical">
           <li role="separator"/>
-          <NavigationLink to="https://www.canada.ca/en/services/jobs/opportunities.html">
-            Find a job
+          <NavigationLink to="/about">
+            About
           </NavigationLink>
-          <NavigationLink to="https://www.canada.ca/en/services/jobs/training.html">
-            Training
+          <NavigationLink to="/hello">
+            Greetings
           </NavigationLink>
-          <NavigationLink to="https://www.canada.ca/business-management">
-            Hire and manage employees
+          <NavigationLink to="/more-content">
+            Some more content
           </NavigationLink>
           <li role="separator"/>
         </ul>
@@ -50,7 +50,7 @@ class Navbar extends React.Component {
     )
 
     return (
-      <nav class="gcweb-menu wb-init gcweb-menu-inited" typeof="SiteNavigationElement" id="wb-auto-2">
+      <nav class="gcweb-menu wb-init gcweb-menu-inited" typeof="SiteNavigationElement" id="navbar">
         <div className="container">
           <h2 class="wb-inv">
             Menu

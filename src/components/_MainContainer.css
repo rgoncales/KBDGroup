@@ -1,0 +1,23 @@
+.MainContainer {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+
+  height: 100%;
+  position: absolute;
+  top: 51px;
+  width: 100%;
+}
+
+.page-content {
+  top: 20%;
+  position: absolute;
+  white-space: pre-line;
+  word-break: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  max-width: 500px;
+}
+.page-content div.body {
+  color: red;
+}
